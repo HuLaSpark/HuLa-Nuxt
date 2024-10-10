@@ -1,11 +1,3 @@
-/*!项目提供scss全局变量*/
-$border-radius: 8px;
-// 横部滚动条宽，纵向滚动条高
-$webkit-scrollbar-width: 8px;
-$webkit-scrollbar-height: 6px;
-// 滚动条颜色
-$webkit-scrollbar-color: rgba(190, 190, 190, 1);
-// 滚动条的轨道颜色
-$webkit-scrollbar-track-color: #efefef;
-// 滚动条的悬停选中滑块颜色
-$webkit-scrollbar-hover: rgba(174, 174, 174, 1);
+:root {
+  --header-height: 4rem;
+}

@@ -1,12 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@unocss/nuxt', '@nuxt/ui', '@nuxt/image'],
-  css: ['@unocss/reset/eric-meyer.css'],
+  modules: ['@nuxt/ui', '@nuxt/image'],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+  components: [
+    {
+      path: '~/components/',
+      pathPrefix: false
+    }
+  ],
+  css: ['~/styles/scss/variable.scss'],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "styles/scss/variable.scss" as *;' // 加载全局样式，使用scss特性
+          api: 'modern'
         }
       }
     }
