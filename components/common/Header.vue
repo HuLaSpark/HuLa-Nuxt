@@ -6,7 +6,7 @@
         <NuxtLink to="/">
           <label class="inline-flex items-center gap-2.5 cursor-pointer">
             <img class="w-9 h-9" src="~/assets/logo/logo.png" alt="" />
-            <span class="text-2xl text-teal-900 font-semibold">HuLa</span>
+            <span class="text-2xl text-teal-900 dark:text-teal-600 font-semibold">HuLa</span>
           </label>
         </NuxtLink>
 
@@ -68,7 +68,12 @@
         </UTooltip>
 
         <UTooltip text="Switch Dark Mode">
-          <UButton size="md" color="gray" variant="ghost" icon="solar:sun-2-outline" />
+          <UButton
+            @click="colorMode.preference = currentTheme"
+            size="md"
+            color="gray"
+            variant="ghost"
+            :icon="colorMode.preference === 'light' ? 'solar:sun-2-outline' : 'solar:moon-line-duotone'" />
         </UTooltip>
       </div>
     </div>
@@ -86,13 +91,14 @@
 
 <script setup lang="ts">
 import pkg from '~/package.json'
-import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const isOpen = ref(false)
 const panelVisible = ref(false)
 const router = useRouter()
 const toast = useToast()
+const colorMode = useColorMode()
+const currentTheme = computed(() => (colorMode.preference === 'light' ? 'dark' : 'light'))
 const commandPaletteRef = ref()
 const users = [
   {
@@ -189,6 +195,7 @@ const onSelect = (option: any) => {
     window.open(option.href, '_blank')
   }
 }
+
 // 检查当前路由是否匹配
 const isActive = (path: string) => {
   return route.path === path
