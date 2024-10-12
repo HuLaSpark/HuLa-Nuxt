@@ -73,7 +73,7 @@
             size="md"
             color="gray"
             variant="ghost"
-            :icon="colorMode.preference === 'light' ? 'solar:sun-2-outline' : 'solar:moon-line-duotone'" />
+            :icon="colorMode.preference === 'light' ? 'solar:sun-2-bold' : 'solar:moon-bold'" />
         </UTooltip>
       </div>
     </div>
