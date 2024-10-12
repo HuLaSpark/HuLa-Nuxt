@@ -42,7 +42,7 @@
                   class="block px-2 py-1.5 rounded-md flex items-start gap-2 hover:bg-gray-100/50 dark:hover:bg-gray-950/50"
                   href="/docs/getting-started/introduction">
                   <UIcon
-                    name="uil:rocket"
+                    name="solar:bolt-outline"
                     :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
                     class="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0 mt-1" />
                   <p>
@@ -64,11 +64,11 @@
 
       <div class="flex justify-end items-center lg:flex-1 gap-2.5">
         <UTooltip text="Search" :shortcuts="['⌘', 'O']">
-          <UButton @click="isOpen = true" size="md" color="gray" variant="ghost" icon="eva:search-outline" />
+          <UButton @click="isOpen = true" size="md" color="gray" variant="ghost" icon="solar:magnifer-linear" />
         </UTooltip>
 
         <UTooltip text="Switch Dark Mode">
-          <UButton size="md" color="gray" variant="ghost" icon="line-md:sun-rising-loop" />
+          <UButton size="md" color="gray" variant="ghost" icon="solar:sun-2-outline" />
         </UTooltip>
       </div>
     </div>

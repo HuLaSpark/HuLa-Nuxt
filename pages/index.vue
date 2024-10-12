@@ -14,7 +14,7 @@
                 <span
                   class="inline-flex items-center text-sm px-2.5 py-1.5 bg-teal-50 dark:bg-teal-400 dark:bg-opacity-10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500 dark:ring-teal-400 ring-opacity-25 dark:ring-opacity-25 relative rounded-full font-semibold dark:hover:bg-teal-400/15 dark:hover:ring-teal-700">
                   <span>HuLa v2.2.0 is out</span>
-                  <UIcon name="material-symbols-light:arrow-right-alt" class="w-5 h-5" />
+                  <UIcon name="solar:arrow-right-line-duotone" class="w-5 h-5" />
                 </span>
               </NuxtLink>
             </div>
@@ -47,7 +47,7 @@
                     class="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 shadow-sm text-white dark:text-gray-900 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-500 aria-disabled:bg-teal-500 dark:bg-teal-400 dark:hover:bg-teal-500 dark:disabled:bg-teal-400 dark:aria-disabled:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 dark:focus-visible:outline-teal-400 inline-flex items-center"
                     href="/docs/getting-started/introduction">
                     <span>Get Started</span>
-                    <UIcon name="ic:baseline-arrow-forward" class="w-5 h-5" />
+                    <UIcon name="solar:arrow-right-linear" class="w-5 h-5" />
                   </a>
                   <button
                     type="button"
@@ -74,7 +74,7 @@
                       <UIcon name="solar:copy-outline" class="flex-shrink-0 h-5 w-5" />
                     </button>
 
-                    <UIcon v-show="isCopy" name="clarity:success-line" class="text-teal-600 flex-shrink-0 h-5 w-5" />
+                    <UIcon v-show="isCopy" name="solar:check-read-line-duotone" class="text-teal-600 flex-shrink-0 h-6 w-6" />
                   </span>
                 </label>
               </div>
