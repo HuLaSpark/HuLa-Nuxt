@@ -1,0 +1,11 @@
+{
+  "docs": {
+    "title": "文档",
+    "content": [
+      {
+        "title": "开始使用",
+        "description": "了解如何开始使用 HuLa"
+      }
+    ]
+  }
+}
