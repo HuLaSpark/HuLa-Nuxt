@@ -85,16 +85,8 @@
           </template>
         </UPopover>
 
-        <ClientOnly>
-          <UTooltip text="Switch Dark Mode">
-            <UButton
-              @click="colorMode.preference = currentTheme"
-              size="md"
-              color="gray"
-              variant="ghost"
-              :icon="colorMode.preference === 'light' ? 'solar:sun-2-bold' : 'solar:moon-bold'" />
-          </UTooltip>
-        </ClientOnly>
+        <!-- 切换主题颜色 -->
+        <ColorMode />
 
         <UTooltip text="GitHub Start">
           <a href="https://github.com/HulaSpark/HuLa">
@@ -129,8 +121,6 @@ const isOpen = ref(false)
 const panelVisible = ref(false)
 const router = useRouter()
 const toast = useToast()
-const colorMode = useColorMode()
-const currentTheme = computed(() => (colorMode.preference === 'light' ? 'dark' : 'light'))
 const currentLanguage = computed(() => (locale.value === 'en' ? 'English' : '中文'))
 const commandPaletteRef = ref()
 const users = [

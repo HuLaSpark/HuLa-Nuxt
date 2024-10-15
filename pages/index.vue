@@ -19,10 +19,10 @@
               </NuxtLink>
             </div>
             <h1 class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl">
-              <span>An Unbelievable</span>
+              <span>{{ t('home.title1') }}</span>
               <br />
               <span class="text-teal-600 block lg:inline-block">
-                <span>IM Ecosystem</span>
+                <span>{{ t('home.title2') }}</span>
               </span>
             </h1>
 
@@ -74,7 +74,10 @@
                       <UIcon name="solar:copy-outline" class="flex-shrink-0 h-5 w-5" />
                     </button>
 
-                    <UIcon v-show="isCopy" name="solar:check-read-line-duotone" class="text-teal-600 flex-shrink-0 h-6 w-6" />
+                    <UIcon
+                      v-show="isCopy"
+                      name="solar:check-read-line-duotone"
+                      class="text-teal-600 flex-shrink-0 h-6 w-6" />
                   </span>
                 </label>
               </div>
@@ -86,6 +89,7 @@
   </main>
 </template>
 <script setup lang="ts">
+const { t } = useI18n()
 useSeoMeta({
   title: 'HuLa: An Unbelievable IM Ecosystem'
 })
