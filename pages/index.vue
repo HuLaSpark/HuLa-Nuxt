@@ -19,25 +19,25 @@
               </NuxtLink>
             </div>
             <h1 class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-7xl">
-              <span>An Unbelievable</span>
+              <span>{{ t('home.title1') }}</span>
               <br />
               <span class="text-teal-600 block lg:inline-block">
-                <span>IM Ecosystem</span>
+                <span>{{ t('home.title2') }}</span>
               </span>
             </h1>
 
             <div class="mt-6 text-lg tracking-tight text-gray-600 dark:text-gray-300">
-              <span class="pr-1">HuLa is an</span>
+              <span class="pr-1">{{ t('home.description1') }}</span>
               <a
                 href="https://github.com/HuLaSpark/HuLa-IM-Tauri"
                 rel="noopener noreferrer"
                 target="_blank"
                 class="font-medium hover:underline underline-offset-2">
-                <span>open source instant messaging apps</span>
+                <span>{{ t('home.description2') }}</span>
               </a>
-              <span> more comprehensive and powerful. </span>
+              <span> {{ t('home.description3') }} </span>
               <br />
-              <span> Hula, more than just an IM system </span>
+              <span> {{ t('home.description4') }} </span>
             </div>
 
             <div class="mt-10 flex flex-wrap gap-x-6 gap-y-3 justify-center">
@@ -46,13 +46,13 @@
                   <a
                     class="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 shadow-sm text-white dark:text-gray-900 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-500 aria-disabled:bg-teal-500 dark:bg-teal-400 dark:hover:bg-teal-500 dark:disabled:bg-teal-400 dark:aria-disabled:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 dark:focus-visible:outline-teal-400 inline-flex items-center"
                     href="/docs/getting-started/introduction">
-                    <span>Get Started</span>
+                    <span>{{ t('home.get_started') }}</span>
                     <UIcon name="solar:arrow-right-linear" class="w-5 h-5" />
                   </a>
                   <button
                     type="button"
                     class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-2.5 px-3.5 py-2.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-teal-500 dark:focus-visible:ring-teal-400 inline-flex items-center">
-                    <span>HuLa in 100 Seconds</span>
+                    <span>{{ t('home.seconds') }}</span>
                     <UIcon name="solar:play-circle-linear" class="w-5 h-5" />
                   </button>
                 </div>
@@ -74,7 +74,10 @@
                       <UIcon name="solar:copy-outline" class="flex-shrink-0 h-5 w-5" />
                     </button>
 
-                    <UIcon v-show="isCopy" name="solar:check-read-line-duotone" class="text-teal-600 flex-shrink-0 h-6 w-6" />
+                    <UIcon
+                      v-show="isCopy"
+                      name="solar:check-read-line-duotone"
+                      class="text-teal-600 flex-shrink-0 h-6 w-6" />
                   </span>
                 </label>
               </div>
@@ -86,6 +89,7 @@
   </main>
 </template>
 <script setup lang="ts">
+const { t } = useI18n()
 useSeoMeta({
   title: 'HuLa: An Unbelievable IM Ecosystem'
 })
