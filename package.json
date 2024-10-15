@@ -19,18 +19,20 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "release": "release-it"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "^2.18.6",
     "@nuxtjs/i18n": "^8.5.5",
     "nuxt": "^3.13.0",
-    "vue": "^3.5.11",
-    "vue-router": "^4.4.2"
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@iconify-json/solar": "^1.2.1",
+    "@release-it/conventional-changelog": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "7.1.0",
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.57.0",
@@ -41,6 +43,7 @@
     "lint-staged": "^15.2.10",
     "only-allow": "^1.2.1",
     "prettier": "^3.3.3",
+    "release-it": "^17.9.0",
     "sass": "^1.79.4"
   }
 }
