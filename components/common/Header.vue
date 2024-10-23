@@ -231,7 +231,7 @@ const handleLanguage = (lang: string, close: () => void) => {
 }
 
 onMounted(() => {
-  locale.value = localStorage.getItem('nuxt-i18n') || 'zh'
+  locale.value = localStorage.getItem('nuxt-i18n') || 'en'
 })
 </script>
 
