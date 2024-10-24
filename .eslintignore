@@ -7,3 +7,4 @@ node_modules
 public
 src/assets
 .eslintrc.cjs
+commitlint.config.cjs
