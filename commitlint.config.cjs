@@ -4,8 +4,8 @@ const path = require('path')
 
 /* 获取项目的修改范围 */
 const scopes = fs
-  .readdirSync(path.resolve(__dirname, '/'), { withFileTypes: true })
-  .filter((dirent) => dirent.isDirectory())
+  .readdirSync(path.resolve(__dirname, './'), { withFileTypes: true })
+  .filter((dirent) => dirent.isDirectory() && !dirent.name.startsWith('.') && !dirent.name.includes('node_modules'))
   .map((dirent) => dirent.name.replace(/s$/, ''))
 
 module.exports = {
