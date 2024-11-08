@@ -1,4 +1,9 @@
+# [1.3.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.2.1...v1.3.0) (2024-11-08)
 
+
+### Features
+
+* **build:** :sparkles: 新增semantic-release来进行自动化发布 ([530b6f5](https://github.com/HuLaSpark/HuLa-Nuxt/commit/530b6f5e43ec788a58227f4d9aacb809837f8653))
 
 ## [1.2.1](https://gitee.com/HuLaSpark/HuLa-Nuxt/compare/v1.2.0...v1.2.1) (2024-10-24)
 
