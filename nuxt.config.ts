@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/image', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      script: [{ src: '/icon.js' }]
+    }
   },
   i18n: {
     vueI18n: '~/config/i18n.config.ts'
@@ -11,7 +14,7 @@ export default defineNuxtConfig({
     preference: 'light' // default value of colorMode.preference
   },
   appConfig: {
-    MasterVersion: 'v2.2.0'
+    MasterVersion: 'v2.5.3'
   },
   components: [
     {
@@ -30,5 +33,8 @@ export default defineNuxtConfig({
     }
   },
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  devServer: {
+    port: 3000
+  }
 })
