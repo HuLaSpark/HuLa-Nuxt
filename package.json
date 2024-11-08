@@ -20,7 +20,8 @@
     "preview": "nuxt preview",
     "commit": "git add . && git-cz",
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
