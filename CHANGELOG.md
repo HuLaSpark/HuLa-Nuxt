@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.3.0...v1.3.1) (2024-11-08)
+
+
+### Performance Improvements
+
+* **layout:** :zap: 优化主页下载链接提示 ([#12](https://github.com/HuLaSpark/HuLa-Nuxt/issues/12)) ([7736ddb](https://github.com/HuLaSpark/HuLa-Nuxt/commit/7736ddbe0ed95082a1301f6c9dc3ba1842033333)), closes [#6](https://github.com/HuLaSpark/HuLa-Nuxt/issues/6)
+
 # [1.3.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.2.1...v1.3.0) (2024-11-08)
 
 
