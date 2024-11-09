@@ -74,7 +74,7 @@
                       <UIcon
                         name="solar:alt-arrow-down-line-duotone"
                         :class="{ 'rotate-180': panelVisible }"
-                        class="w-4 h-4 transform transition-transform duration-300 group-hover:text-teal-600 group-hover:rotate-180" />
+                        class="w-4 h-4 group-hover:text-teal-600 group-hover:rotate-180" />
                     </div>
 
                     <template #panel>
@@ -149,21 +149,6 @@ watch(isCopy, (val) => {
     }, 2000)
   }
 })
-
-const handleCopy = () => {
-  const el = document.querySelector('input')
-  if (el) {
-    navigator.clipboard
-      .writeText(el.value)
-      .then(() => {
-        // 显示复制成功的提示
-        isCopy.value = true
-      })
-      .catch((err) => {
-        console.error('复制失败:', err)
-      })
-  }
-}
 </script>
 
 <style scoped lang="scss"></style>

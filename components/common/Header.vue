@@ -39,7 +39,7 @@
               class="overflow-hidden focus:outline-none relative bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 rounded-md shadow-lg">
               <div class="p-2 space-y-1">
                 <a
-                  class="block px-2 py-1.5 rounded-md flex items-start gap-2 hover:bg-gray-100/50 dark:hover:bg-gray-950/50"
+                  class="px-2 py-1.5 rounded-md flex items-start gap-2 hover:bg-gray-100/50 dark:hover:bg-gray-950/50"
                   href="/docs/getting-started/introduction">
                   <UIcon
                     name="solar:bolt-outline"
