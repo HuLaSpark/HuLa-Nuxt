@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.3.1...v1.4.0) (2024-11-09)
+
+
+### Features
+
+* **build:** :sparkles: 新增github action自动化部署 ([#13](https://github.com/HuLaSpark/HuLa-Nuxt/issues/13)) ([c7f9165](https://github.com/HuLaSpark/HuLa-Nuxt/commit/c7f916541f2d3c2c607ec6fca8dc52702c28be80))
+
 ## [1.3.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.3.0...v1.3.1) (2024-11-08)
 
 ### Performance Improvements
