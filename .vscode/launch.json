@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "name": "运行脚本: dev",
+      "request": "launch",
+      "command": "pnpm run dev",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "node-terminal",
+      "name": "运行脚本: build",
+      "request": "launch",
+      "command": "pnpm run build",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

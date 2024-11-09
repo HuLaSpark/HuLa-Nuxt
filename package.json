@@ -8,8 +8,8 @@
     "pnpm": ">=8.10.0"
   },
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "prettier --config .prettierrc --write",
+    "*.{js,jsx,vue,ts,tsx,json}": [
+      "prettier . --write",
       "eslint ./"
     ]
   },
@@ -50,7 +50,9 @@
     "only-allow": "^1.2.1",
     "prettier": "^3.3.3",
     "sass": "^1.79.4",
-    "semantic-release": "^24.2.0"
+    "semantic-release": "^24.2.0",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   },
   "config": {
     "commitizen": {
