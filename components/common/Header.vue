@@ -5,8 +5,8 @@
       <div class="lg:flex-1 flex items-center gap-2.5">
         <NuxtLink to="/">
           <label class="inline-flex items-center gap-2.5 cursor-pointer">
-            <img class="w-9 h-9" src="~/assets/logo/logo.png" alt="" />
-            <span class="text-2xl text-teal-900 dark:text-teal-600 font-semibold">HuLa</span>
+            <img class="w-7 h-7 md:w-9 md:h-9" src="~/assets/logo/logo.png" alt="" />
+            <span class="text-lg md:text-2xl text-teal-900 dark:text-teal-600 font-semibold">HuLa</span>
           </label>
         </NuxtLink>
 
@@ -88,13 +88,13 @@
         <!-- 切换主题模式 -->
         <ColorMode />
 
-        <UTooltip text="GitHub Start">
+        <UTooltip text="GitHub Start" class="hidden md:block">
           <a href="https://github.com/HulaSpark/HuLa">
             <img src="https://img.shields.io/github/stars/HulaSpark/HuLa" alt="star" />
           </a>
         </UTooltip>
 
-        <UTooltip text="Gitee Start">
+        <UTooltip text="Gitee Start" class="hidden md:block">
           <a href="https://gitee.com/HuLaSpark/HuLa">
             <img src="https://gitee.com/HuLaSpark/HuLa/badge/star.svg?theme=gray" alt="star" />
           </a>
