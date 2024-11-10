@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.4.0...v1.4.1) (2024-11-10)
+
+
+### Performance Improvements
+
+* **layout:** :zap: 优化背景颜色和移动端布局 ([#14](https://github.com/HuLaSpark/HuLa-Nuxt/issues/14)) ([5cfaee7](https://github.com/HuLaSpark/HuLa-Nuxt/commit/5cfaee799b3082cbd18862dc9136f084a1dacfb9))
+
 # [1.4.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.3.1...v1.4.0) (2024-11-09)
 
 
