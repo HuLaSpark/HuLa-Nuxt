@@ -2,7 +2,7 @@
   <main class="min-h-[calc(100vh-var(--header-height))] relative dark:bg-[#111729]">
     <img
       class="pointer-events-none absolute w-full top-[1px] text-teal flex-shrink-0 z-10"
-      src="~/assets/svg/header.svg"
+      src="/assets/svg/header.svg"
       alt="" />
 
     <div class="dark:bg-gray-900">
