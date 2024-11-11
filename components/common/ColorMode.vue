@@ -53,5 +53,5 @@ async function toggleDark({ clientX: x, clientY: y }: MouseEvent) {
 </script>
 
 <style lang="scss">
-@import '@/styles/scss/view-transition';
+@import '~/styles/scss/view-transition';
 </style>
