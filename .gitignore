@@ -16,3 +16,5 @@ logs
 # Misc
 .DS_Store
 .fleet
+
+coverage
