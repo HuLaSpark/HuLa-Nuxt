@@ -83,7 +83,7 @@
                         <a
                           class="flex items-center gap-4 py-1 px-2 box-border rounded-md hover:bg-gray-100 hover:dark:bg-gray-800"
                           rel="noopener noreferrer"
-                          href="https://gitee.com/HuLaSpark/HuLa/releases/download/v2.5.3/HuLa_aarch64.app.tar.gz">
+                          :href="`https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_aarch64.app.tar.gz`">
                           <svg class="size-4 flex-shrink-0"><use href="#to-bottom"></use></svg>
                           <p class="text-end w-full">aarch64.app.tar.gz</p>
                         </a>
@@ -91,7 +91,7 @@
                         <a
                           class="flex items-center gap-4 py-1 px-2 box-border rounded-md hover:bg-gray-100 hover:dark:bg-gray-800"
                           rel="noopener noreferrer"
-                          href="https://gitee.com/HuLaSpark/HuLa/releases/download/v2.5.3/HuLa_x64.app.tar.gz">
+                          :href="`https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_x64.app.tar.gz`">
                           <svg class="size-4 flex-shrink-0"><use href="#to-bottom"></use></svg>
                           <p class="text-end w-full">x64.app.tar.gz</p>
                         </a>
@@ -99,7 +99,7 @@
                         <a
                           class="flex items-center gap-4 py-1 px-2 box-border rounded-md hover:bg-gray-100 hover:dark:bg-gray-800"
                           rel="noopener noreferrer"
-                          href="https://gitee.com/HuLaSpark/HuLa/releases/download/v2.5.3/HuLa_2.5.3_aarch64.dmg">
+                          :href="`https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_${config.MasterVersion.replace('v', '')}_aarch64.dmg`">
                           <svg class="size-4 flex-shrink-0"><use href="#to-bottom"></use></svg>
                           <p class="text-end w-full">aarch64.dmg</p>
                         </a>
@@ -107,7 +107,7 @@
                         <a
                           class="flex items-center gap-4 py-1 px-2 box-border rounded-md hover:bg-gray-100 hover:dark:bg-gray-800"
                           rel="noopener noreferrer"
-                          href="https://gitee.com/HuLaSpark/HuLa/releases/download/v2.5.3/HuLa_2.5.3_x64.dmg">
+                          :href="`https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_${config.MasterVersion.replace('v', '')}_x64.dmg`">
                           <svg class="size-4 flex-shrink-0"><use href="#to-bottom"></use></svg>
                           <p class="text-end w-full">x64.dmg</p>
                         </a>
@@ -120,7 +120,7 @@
                   <a
                     class="flex items-center gap-2 text-sm bg-gray-100 w-fit px-6 py-2 rounded-md hover:text-teal-600 dark:bg-gray-800"
                     rel="noopener noreferrer"
-                    href="https://gitee.com/HuLaSpark/HuLa/releases/download/v2.5.3/HuLa_2.5.3_x64_zh-CN.msi">
+                    :href="`https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_${config.MasterVersion.replace('v', '')}_x64-setup.exe`">
                     <svg class="size-6"><use href="#windows"></use></svg>
                     <span>Windows</span>
                   </a>
