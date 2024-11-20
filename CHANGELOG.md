@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.4.1...v1.4.2) (2024-11-20)
+
+
+### Bug Fixes
+
+* **page:** :bug: 修改hula版本号和下载地址 ([#17](https://github.com/HuLaSpark/HuLa-Nuxt/issues/17)) ([2ed93f8](https://github.com/HuLaSpark/HuLa-Nuxt/commit/2ed93f80d7a1061e00ce3f4debe022d0fec3884d))
+
 ## [1.4.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.4.0...v1.4.1) (2024-11-10)
 
 
