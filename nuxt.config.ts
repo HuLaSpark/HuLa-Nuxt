@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     preference: 'light' // default value of colorMode.preference
   },
   appConfig: {
-    MasterVersion: 'v2.5.3'
+    MasterVersion: 'v2.5.5'
   },
   components: [
     {
