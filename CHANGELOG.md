@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.4.2...v1.5.0) (2024-11-22)
+
+
+### Features
+
+* **page:** :sparkles: 新增首页样式 ([#18](https://github.com/HuLaSpark/HuLa-Nuxt/issues/18)) ([18d9dd9](https://github.com/HuLaSpark/HuLa-Nuxt/commit/18d9dd9db26fffd4344f88d9900f0162b2a29c60))
+
 ## [1.4.2](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.4.1...v1.4.2) (2024-11-20)
 
 
