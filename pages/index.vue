@@ -5,7 +5,8 @@
       src="/assets/svg/header.svg"
       alt="" />
 
-    <div class="dark:bg-gray-900">
+    <!-- 首页介绍 -->
+    <div class="dark:bg-gray-900 min-h-120">
       <div class="py-24 sm:py-32 md:py-40 relative dark:bg-gradient-to-b from-gray-950 to-gray-900 md:pb-24">
         <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col">
           <div class="text-center relative z-[1]">
@@ -131,12 +132,118 @@
         </div>
       </div>
     </div>
+
+    <!-- 图片 -->
+    <div class="w-full flex items-center justify-center" @click="toggleImage">
+      <Transition name="fade" mode="out-in">
+        <img
+          v-if="showFirstImage"
+          key="first"
+          class="dark:hidden w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
+          src="/assets/images/1.png"
+          alt="" />
+        <img
+          v-else
+          key="second"
+          class="dark:hidden w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
+          src="/assets/images/3.png"
+          alt="" />
+      </Transition>
+      <Transition name="fade" mode="out-in">
+        <img
+          v-if="showFirstImage"
+          key="first-dark"
+          class="hidden dark:block w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
+          src="/assets/images/2.png"
+          alt="" />
+        <img
+          v-else
+          key="second-dark"
+          class="hidden dark:block w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
+          src="/assets/images/4.png"
+          alt="" />
+      </Transition>
+    </div>
+
+    <!-- 页脚部分 -->
+    <footer class="bg-white dark:bg-gray-900 w-full">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <!-- 联系方式 -->
+        <div class="flex items-start gap-8 mb-8">
+          <img class="h-24" src="/assets/logo/hula.png" alt="HuLa Logo" />
+          <div class="flex-1 flex flex-col justify-end md:flex-row gap-10 md:gap-40">
+            <div>
+              <h3 class="text-md font-semibold text-gray-900 dark:text-white mb-4">{{ t('foot.title.item1') }}</h3>
+              <div class="space-y-3 text-gray-600 dark:text-gray-300">
+                <p class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-envelope" class="w-4 h-4 text-teal-500" />
+                  <a href="mailto:contact@hula.com" class="hover:text-teal-500 text-sm">2439646234@qq.com</a>
+                </p>
+                <p class="flex items-center gap-2">
+                  <UIcon name="i-heroicons-map-pin" class="w-4 h-4 text-teal-500" />
+                  <span class="text-sm">China</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-md font-semibold text-gray-900 dark:text-white mb-4">{{ t('foot.title.item2') }}</h3>
+              <div class="flex space-x-4">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/HuLaSpark"
+                  class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400">
+                  <UIcon name="i-simple-icons-github" class="size-5" />
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://gitee.com/HuLaSpark"
+                  class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400">
+                  <UIcon name="i-simple-icons-gitee" class="size-5" />
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-md font-semibold text-gray-900 dark:text-white mb-4">
+                {{ t('foot.title.item3.title') }}
+              </h3>
+              <div class="space-y-3 text-gray-600 dark:text-gray-300 text-sm">
+                <p>
+                  <a href="/docs/getting-started/introduction" class="hover:text-teal-500">{{
+                    t('foot.title.item3.i1')
+                  }}</a>
+                </p>
+                <p>
+                  <a href="/" class="hover:text-teal-500">{{ t('foot.title.item3.i2') }}</a>
+                </p>
+                <p>
+                  <a href="/" class="hover:text-teal-500">{{ t('foot.title.item3.i3') }}</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 分隔线 -->
+        <div class="border-t border-gray-200 dark:border-gray-800 my-8"></div>
+        <!-- 版权信息 -->
+        <div class="text-center text-sm text-gray-300 dark:text-gray-600">
+          <p>Copyright {{ new Date().getFullYear() }} HuLaSpark All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
   </main>
 </template>
 <script setup lang="ts">
 const config = useAppConfig()
 const { t } = useI18n()
 const panelVisible = ref(false)
+const showFirstImage = ref(true)
+
+const toggleImage = () => {
+  showFirstImage.value = !showFirstImage.value
+}
+
 useSeoMeta({
   title: 'HuLa: An Unbelievable IM Ecosystem'
 })
@@ -152,8 +259,14 @@ watch(isCopy, (val) => {
 })
 </script>
 
-<style scoped lang="scss">
-.a {
-  color: #111729;
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
