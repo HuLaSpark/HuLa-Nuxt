@@ -1,0 +1,12 @@
+{
+  "title": {
+    "item1": "Contact Us",
+    "item2": "Follow Us",
+    "item3": {
+      "title": "Quick Links",
+      "i1": "Documentation Center",
+      "i2": "About Us",
+      "i3": "Privacy Policy"
+    }
+  }
+}
