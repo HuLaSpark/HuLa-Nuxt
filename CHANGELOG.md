@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.3...v1.5.4) (2024-11-23)
+
+
+### Bug Fixes
+
+* **page:** :bug: 去除浏览统计量 ([#23](https://github.com/HuLaSpark/HuLa-Nuxt/issues/23)) ([c8d0fdc](https://github.com/HuLaSpark/HuLa-Nuxt/commit/c8d0fdc0e7989ee38a43646637f151cb8a1bee2a))
+
 ## [1.5.3](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.2...v1.5.3) (2024-11-23)
 
 
