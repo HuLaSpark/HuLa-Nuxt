@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.2...v1.5.3) (2024-11-23)
+
+
+### Bug Fixes
+
+* **server:** :bug: 修复使用本地存储访客变量 ([#22](https://github.com/HuLaSpark/HuLa-Nuxt/issues/22)) ([ce04ad0](https://github.com/HuLaSpark/HuLa-Nuxt/commit/ce04ad0277429aec2566f9fe1b310dac7d4474b7))
+
 ## [1.5.2](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.1...v1.5.2) (2024-11-23)
 
 
