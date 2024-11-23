@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.4...v1.5.5) (2024-11-23)
+
+
+### Bug Fixes
+
+* **page:** :bug: 修改滚动条样式和一些浏览器兼容问题 ([#24](https://github.com/HuLaSpark/HuLa-Nuxt/issues/24)) ([d0d21b6](https://github.com/HuLaSpark/HuLa-Nuxt/commit/d0d21b6a68e0d2201778162740535b7add2751b9))
+
 ## [1.5.4](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.3...v1.5.4) (2024-11-23)
 
 
