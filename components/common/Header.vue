@@ -63,7 +63,7 @@
       </ul>
 
       <div class="flex justify-end items-center lg:flex-1 gap-2.5">
-        <UTooltip text="Search" :shortcuts="['⌘', 'O']">
+        <UTooltip text="Search" :shortcuts="['⌘', 'O']" class="hidden md:block">
           <UButton @click="isOpen = true" size="md" color="gray" variant="ghost" icon="solar:magnifer-linear" />
         </UTooltip>
 
@@ -99,7 +99,34 @@
             <img src="https://gitee.com/HuLaSpark/HuLa/badge/star.svg?theme=gray" alt="star" />
           </a>
         </UTooltip>
+
+        <!-- Mobile Menu Button -->
+        <UButton
+          class="md:hidden"
+          @click="isMobileMenuOpen = true"
+          size="md"
+          color="gray"
+          variant="ghost"
+          icon="solar:hamburger-menu-linear" />
       </div>
+    </div>
+  </div>
+
+  <div v-if="isMobileMenuOpen" class="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex flex-col">
+    <button
+      @click="isMobileMenuOpen = false"
+      class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+      <UIcon name="solar:close-circle-linear" class="w-6 h-6" />
+    </button>
+    <div class="p-4">
+      <span
+        :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
+        class="font-semibold text-sm/6 inline-block relative">
+        {{ t('header.docs.content[0].title') }}
+      </span>
+      <span class="text-sm leading-snug text-gray-500 dark:text-gray-400 line-clamp-2">
+        {{ t('header.docs.content[0].description') }}
+      </span>
     </div>
   </div>
 
@@ -119,6 +146,7 @@ const { setLocale, t, locale } = useI18n()
 const route = useRoute()
 const isOpen = ref(false)
 const panelVisible = ref(false)
+const isMobileMenuOpen = ref(false)
 const router = useRouter()
 const toast = useToast()
 const currentLanguage = computed(() => (locale.value === 'en' ? 'English' : '中文'))

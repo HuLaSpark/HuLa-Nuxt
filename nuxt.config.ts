@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     vueI18n: '~/config/i18n.config.ts'
   },
   colorMode: {
-    preference: 'light' // default value of colorMode.preference
+    preference: 'dark' // default value of colorMode.preference
   },
   appConfig: {
     MasterVersion: 'v2.5.5'
