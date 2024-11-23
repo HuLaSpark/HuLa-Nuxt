@@ -49,18 +49,6 @@
               {{ t('home.description3') }}
             </p>
 
-            <!-- Project Stats -->
-            <div class="mt-8 flex justify-center gap-8 text-sm">
-              <div class="flex items-center gap-4">
-                <span class="text-2xl font-bold text-teal-600">{{ totalViews }}</span>
-                <span class="text-gray-600 dark:text-gray-400">总访问量</span>
-              </div>
-              <div class="flex items-center gap-4">
-                <span class="text-2xl font-bold text-teal-600">{{ dailyViews }}</span>
-                <span class="text-gray-600 dark:text-gray-400">今日访问</span>
-              </div>
-            </div>
-
             <!-- CTA Buttons -->
             <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
               <a
@@ -83,10 +71,6 @@
                         :class="{ 'rotate-180': panelVisible }"
                         class="w-4 h-4 group-hover:text-teal-600 group-hover:rotate-180" />
                     </div>
-                    <div class="flex items-center gap-2 text-sm text-gray-500">
-                      <UIcon name="i-heroicons-arrow-down-circle" class="w-5 h-5" />
-                      <span>{{ getDownloadCount('mac') }}</span>
-                    </div>
                   </div>
 
                   <template #panel>
@@ -96,8 +80,7 @@
                         :key="index"
                         class="flex items-center gap-4 py-1 px-2 box-border rounded-md hover:bg-gray-100 hover:dark:bg-gray-800"
                         rel="noopener noreferrer"
-                        :href="item.url"
-                        @click="() => incrementDownloadCount('mac')">
+                        :href="item.url">
                         <svg class="size-4 flex-shrink-0"><use href="#to-bottom"></use></svg>
                         <p class="text-end w-full">{{ item.label }}</p>
                       </a>
@@ -111,15 +94,10 @@
                     <a
                       class="group flex items-center gap-2 text-sm bg-gray-100 px-6 py-2 rounded-md hover:text-teal-600 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                       rel="noopener noreferrer"
-                      :href="windowsDownload.url"
-                      @click="() => incrementDownloadCount('windows')">
+                      :href="windowsDownload.url">
                       <svg class="size-6 group-hover:text-teal-600"><use href="#windows"></use></svg>
                       <span class="group-hover:text-teal-600">Windows</span>
                     </a>
-                    <div class="flex items-center gap-2 text-sm text-gray-500">
-                      <UIcon name="i-heroicons-arrow-down-circle" class="w-5 h-5" />
-                      <span>{{ getDownloadCount('windows') }}</span>
-                    </div>
                   </div>
                 </template>
               </div>
@@ -527,17 +505,13 @@
   </main>
 </template>
 <script setup lang="ts">
-import { usePageViews } from '~/hooks/usePageViews'
 import { useUserSystem } from '~/hooks/useUserSystem'
-import { useDownloadCount } from '~/hooks/useDownloadCount'
 
 const config = useAppConfig()
 const { t } = useI18n()
 const panelVisible = ref(false)
 const showFirstImage = ref(true)
-const { totalViews, dailyViews } = usePageViews()
 const { system, isMobile } = useUserSystem()
-const { incrementDownloadCount, getDownloadCount } = useDownloadCount()
 
 const macDownloads = computed(() => [
   {
