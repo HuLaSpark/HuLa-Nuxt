@@ -356,7 +356,7 @@
                 class="aspect-square bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:z-10 hover:border-teal-500/50 dark:hover:border-teal-400/50">
                 <div class="h-full flex flex-col">
                   <div class="flex items-start gap-4 mb-4">
-                    <img src="https://github.com/HuLaSpark.png" alt="User Avatar" class="w-12 h-12 rounded-full" />
+                    <img src="~/assets/home/hulaspark.png" alt="User Avatar" class="w-12 h-12 rounded-full" />
                     <div class="flex-1">
                       <div class="font-semibold text-gray-900 dark:text-white">HuLa Community</div>
                       <div class="text-sm text-teal-500 dark:text-teal-400">Open Source Contributor</div>
@@ -376,7 +376,7 @@
                 class="aspect-square bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:z-10 hover:border-teal-500/50 dark:hover:border-teal-400/50">
                 <div class="h-full flex flex-col">
                   <div class="flex items-start gap-4 mb-4">
-                    <img src="https://github.com/unocss.png" alt="Developer Avatar" class="w-12 h-12 rounded-full" />
+                    <img src="~/assets/home/unocss.png" alt="Developer Avatar" class="w-12 h-12 rounded-full" />
                     <div class="flex-1">
                       <div class="font-semibold text-gray-900 dark:text-white">Developer Experience</div>
                       <div class="text-sm text-teal-500 dark:text-teal-400">Core Team</div>
@@ -402,31 +402,31 @@
         <a href="https://vitejs.dev" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="https://vitejs.dev/logo.svg"
+            src="~/assets/home/vite.svg"
             alt="vite" />
         </a>
         <a href="https://www.typescriptlang.org" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="https://raw.githubusercontent.com/microsoft/TypeScript-Website/v2/packages/typescriptlang-org/static/branding/ts-logo-512.svg"
+            src="~/assets/home/TS.svg"
             alt="typescript" />
         </a>
         <a href="https://tauri.app" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="https://github.com/tauri-apps.png"
+            src="~/assets/home/tauri.png"
             alt="tauri" />
         </a>
         <a href="https://vuejs.org" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="https://vuejs.org/images/logo.png"
+            src="~/assets/home/vue.png"
             alt="vue" />
         </a>
         <a href="https://unocss.dev" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="https://github.com/unocss.png"
+            src="~/assets/home/unocss.png"
             alt="unocss" />
         </a>
       </div>
