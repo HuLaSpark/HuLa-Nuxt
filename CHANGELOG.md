@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.1...v1.5.2) (2024-11-23)
+
+
+### Bug Fixes
+
+* **component:** :bug: 修复网站浏览量统计逻辑 ([#21](https://github.com/HuLaSpark/HuLa-Nuxt/issues/21)) ([ca24f5c](https://github.com/HuLaSpark/HuLa-Nuxt/commit/ca24f5c5cf2eb5febb6f5dea927daaae06e72924))
+
 ## [1.5.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.0...v1.5.1) (2024-11-23)
 
 
