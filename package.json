@@ -27,6 +27,7 @@
     "coverage": "pnpm dlx vitest run --coverage"
   },
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^4.5.1",
     "@nuxt/image": "^1.8.1",
     "@nuxt/ui": "^2.18.6",
     "@nuxtjs/i18n": "^8.5.5",
