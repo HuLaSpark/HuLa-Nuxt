@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.0...v1.5.1) (2024-11-23)
+
+
+### Performance Improvements
+
+* **page:** :zap: 优化首页的样式 ([#20](https://github.com/HuLaSpark/HuLa-Nuxt/issues/20)) ([e310de8](https://github.com/HuLaSpark/HuLa-Nuxt/commit/e310de887465f8923689bc746b78cf85564357a3))
+
 # [1.5.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.4.2...v1.5.0) (2024-11-22)
 
 
