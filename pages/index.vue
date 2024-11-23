@@ -92,7 +92,7 @@
                 <template v-if="system === 'windows'">
                   <div class="flex items-center gap-4">
                     <a
-                      class="group flex items-center gap-2 text-sm bg-gray-100 px-6 py-2 rounded-md hover:text-teal-600 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                      class="group flex items-center gap-2 text-sm bg-[#fefefe] w-fit px-6 py-2 rounded-md dark:bg-gray-800"
                       rel="noopener noreferrer"
                       :href="windowsDownload.url">
                       <svg class="size-6 group-hover:text-teal-600"><use href="#windows"></use></svg>
@@ -313,7 +313,7 @@
       <div class="text-center max-w-4xl mx-auto px-4 relative">
         <span class="text-sm font-semibold text-teal-500 dark:text-teal-400 mb-3 block"> Open Source Technology </span>
         <h2
-          class="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+          class="pb-1 text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
           Built with cutting-edge technology
         </h2>
 
@@ -340,7 +340,7 @@
                       <div class="text-sm text-teal-500 dark:text-teal-400">Open Source Contributor</div>
                     </div>
                   </div>
-                  <p class="text-gray-600 dark:text-gray-400 flex-1 text-left leading-relaxed">
+                  <p class="text-sm line-clamp-4 text-gray-600 dark:text-gray-400 flex-1 text-left leading-relaxed">
                     "HuLa's modern tech stack makes development a breeze. The combination of Vue 3, TypeScript, and
                     Tauri creates an incredibly powerful foundation for building cross-platform applications."
                   </p>
@@ -360,7 +360,7 @@
                       <div class="text-sm text-teal-500 dark:text-teal-400">Core Team</div>
                     </div>
                   </div>
-                  <p class="text-gray-600 dark:text-gray-400 flex-1 text-left leading-relaxed">
+                  <p class="text-sm line-clamp-4 text-gray-600 dark:text-gray-400 flex-1 text-left leading-relaxed">
                     "The integration of Vite and UnoCSS provides an exceptional developer experience with instant HMR
                     and utility-first styling. Perfect for rapid development and prototyping."
                   </p>
