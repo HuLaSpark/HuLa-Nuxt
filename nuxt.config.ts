@@ -1,14 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/test-utils/module', '@nuxt/ui', '@nuxt/image', '@nuxtjs/color-mode', '@nuxtjs/i18n'],
+  modules: ['@nuxt/test-utils/module', '@nuxt/ui', '@nuxt/image', '@nuxtjs/color-mode'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       script: [{ src: '/icon.js' }]
     }
-  },
-  i18n: {
-    vueI18n: '~/config/i18n.config.ts'
   },
   colorMode: {
     preference: 'dark' // default value of colorMode.preference
@@ -22,12 +19,12 @@ export default defineNuxtConfig({
       pathPrefix: false
     }
   ],
-  css: ['~/styles/scss/variable.scss'],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern'
+          api: 'modern',
+          additionalData: '@use "~/styles/scss/variable.scss" as *;'
         }
       }
     }

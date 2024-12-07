@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <UTooltip text="Switch Dark Mode">
+    <UTooltip text="切换深色模式">
       <UButton
         @click="toggleDark"
         size="md"
@@ -53,5 +53,5 @@ async function toggleDark({ clientX: x, clientY: y }: MouseEvent) {
 </script>
 
 <style lang="scss">
-@import '~/styles/scss/view-transition';
+@use '~/styles/scss/view-transition';
 </style>
