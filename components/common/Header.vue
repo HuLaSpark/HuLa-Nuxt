@@ -11,7 +11,7 @@
         </NuxtLink>
 
         <div class="relative inline-flex">
-          <UTooltip :text="`Latest Version: ${config.MasterVersion}`">
+          <UTooltip :text="`最新版本: ${config.MasterVersion}`">
             <span
               class="inline-flex items-center cursor-pointer text-xs px-1.5 py-0.5 bg-teal-50 dark:bg-teal-400 dark:bg-opacity-10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500 dark:ring-teal-400 ring-opacity-25 dark:ring-opacity-25 -mb-[2px] rounded font-semibold">
               {{ config.MasterVersion }}
@@ -27,7 +27,7 @@
               to="/docs/getting-started/introduction"
               :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
               class="text-sm/6 font-semibold flex items-center gap-2 group-hover:text-teal-600">
-              {{ t('header.docs.title') }}
+              文档
               <UIcon
                 name="solar:alt-arrow-down-line-duotone"
                 :class="{ 'rotate-180': panelVisible }"
@@ -49,10 +49,10 @@
                     <span
                       :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
                       class="font-semibold text-sm/6 inline-block relative">
-                      {{ t('header.docs.content[0].title') }}
+                      开始使用
                     </span>
                     <span class="text-sm leading-snug text-gray-500 dark:text-gray-400 line-clamp-2">
-                      {{ t('header.docs.content[0].description') }}
+                      了解如何开始使用 HuLa
                     </span>
                   </p>
                 </a>
@@ -63,27 +63,9 @@
       </ul>
 
       <div class="flex justify-end items-center lg:flex-1 gap-2.5">
-        <UTooltip text="Search" :shortcuts="['⌘', 'O']" class="hidden md:block">
+        <UTooltip text="搜索" :shortcuts="['⌘', 'O']" class="hidden md:block">
           <UButton @click="isOpen = true" size="md" color="gray" variant="ghost" icon="solar:magnifer-linear" />
         </UTooltip>
-
-        <UPopover mode="hover">
-          <UButton size="md" color="gray" variant="ghost"> {{ currentLanguage }} </UButton>
-          <template #panel="{ close }">
-            <div class="p-2 flex text-center flex-col gap-1">
-              <span
-                @click="handleLanguage('en', close)"
-                class="cursor-pointer text-sm w-full px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50">
-                English
-              </span>
-              <span
-                @click="handleLanguage('zh', close)"
-                class="cursor-pointer text-sm w-full px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50">
-                中文
-              </span>
-            </div>
-          </template>
-        </UPopover>
 
         <!-- 切换主题模式 -->
         <ColorMode />
@@ -122,11 +104,9 @@
       <span
         :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
         class="font-semibold text-sm/6 inline-block relative">
-        {{ t('header.docs.content[0].title') }}
+        开始使用
       </span>
-      <span class="text-sm leading-snug text-gray-500 dark:text-gray-400 line-clamp-2">
-        {{ t('header.docs.content[0].description') }}
-      </span>
+      <span class="text-sm leading-snug text-gray-500 dark:text-gray-400 line-clamp-2"> 了解如何开始使用 HuLa </span>
     </div>
   </div>
 
@@ -142,14 +122,12 @@
 
 <script setup lang="ts">
 const config = useAppConfig()
-const { setLocale, t, locale } = useI18n()
 const route = useRoute()
 const isOpen = ref(false)
 const panelVisible = ref(false)
 const isMobileMenuOpen = ref(false)
 const router = useRouter()
 const toast = useToast()
-const currentLanguage = computed(() => (locale.value === 'en' ? 'English' : '中文'))
 const commandPaletteRef = ref()
 const users = [
   {
@@ -251,16 +229,6 @@ const onSelect = (option: any) => {
 const isActive = (path: string) => {
   return route.path === path
 }
-
-const handleLanguage = (lang: string, close: () => void) => {
-  setLocale(lang)
-  localStorage.setItem('nuxt-i18n', lang)
-  close()
-}
-
-onMounted(() => {
-  locale.value = localStorage.getItem('nuxt-i18n') || 'en'
-})
 </script>
 
 <style scoped lang="scss"></style>
