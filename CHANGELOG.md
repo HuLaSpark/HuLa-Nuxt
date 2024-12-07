@@ -1,3 +1,10 @@
+## [1.5.6](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.5...v1.5.6) (2024-12-07)
+
+
+### Bug Fixes
+
+* **component:** :bug: 移除i18n国际化 ([#25](https://github.com/HuLaSpark/HuLa-Nuxt/issues/25)) ([9090f1a](https://github.com/HuLaSpark/HuLa-Nuxt/commit/9090f1a5802a0dc69240b6685a965e3b5ddd6183))
+
 ## [1.5.5](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.4...v1.5.5) (2024-11-23)
 
 
