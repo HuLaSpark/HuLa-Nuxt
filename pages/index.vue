@@ -504,7 +504,7 @@
         <div class="border-t border-gray-200 dark:border-gray-800 my-8"></div>
         <!-- 版权信息 -->
         <div class="text-center text-xs text-gray-300 dark:text-gray-600">
-          <p>Copyright {{ new Date().getFullYear() }} HuLaSpark All Rights Reserved.</p>
+          <p>Copyright © {{ new Date().getFullYear() }} HuLaSpark All Rights Reserved.</p>
         </div>
       </div>
     </footer>
