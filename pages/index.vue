@@ -1,310 +1,292 @@
 <template>
-  <main class="min-h-[calc(100vh-var(--header-height))] relative bg-[#f8fafc] dark:bg-[#111729]">
-    <img
-      class="pointer-events-none absolute w-full top-[1px] text-teal flex-shrink-0 z-10"
-      src="/assets/svg/header.svg"
-      alt="" />
-
+  <PageBackground>
     <!-- 首页介绍 -->
-    <div class="bg-[#f8fafc] dark:bg-[#111729] min-h-screen relative overflow-hidden">
-      <div class="absolute inset-0">
-        <div
-          class="absolute inset-0 bg-gradient-to-b from-[#f8fafc] via-[#e2e8f0] to-[#f8fafc] dark:from-[#111729] dark:via-[#0c1322] dark:to-[#111729] opacity-60 dark:opacity-80"></div>
-        <div
-          class="absolute inset-0 bg-[url('/assets/svg/grid-light.svg')] dark:bg-[url('/assets/svg/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
-          <div class="photon-effect light-photon dark:dark-photon"></div>
-          <div class="photon-effect light-photon dark:dark-photon delay-2"></div>
-          <div class="photon-effect light-photon dark:dark-photon delay-4"></div>
-        </div>
-      </div>
+    <div class="relative pt-20 pb-16 sm:pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Hero Section -->
+        <div class="text-center relative z-[1]">
+          <div class="mb-8 animate-fade-in">
+            <NuxtLink to="https://github.com/HuLaSpark/HuLa" target="_blank" rel="noopener noreferrer">
+              <span
+                class="inline-flex items-center text-sm px-3 py-1.5 bg-teal-50 dark:bg-teal-400/10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500/25 dark:ring-teal-400/25 rounded-full font-semibold transition hover:bg-teal-100 dark:hover:bg-teal-400/15">
+                <span>HuLa {{ config.MasterVersion }} 现已发布</span>
+                <UIcon name="solar:arrow-right-line-duotone" class="w-5 h-5 ml-1" />
+              </span>
+            </NuxtLink>
+          </div>
 
-      <div class="relative pt-20 pb-16 sm:pb-24 lg:pb-32">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <!-- Hero Section -->
-          <div class="text-center relative z-[1]">
-            <div class="mb-8 animate-fade-in">
-              <NuxtLink to="https://github.com/HuLaSpark/HuLa" target="_blank" rel="noopener noreferrer">
-                <span
-                  class="inline-flex items-center text-sm px-3 py-1.5 bg-teal-50 dark:bg-teal-400/10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500/25 dark:ring-teal-400/25 rounded-full font-semibold transition hover:bg-teal-100 dark:hover:bg-teal-400/15">
-                  <span>HuLa {{ config.MasterVersion }} 现已发布</span>
-                  <UIcon name="solar:arrow-right-line-duotone" class="w-5 h-5 ml-1" />
-                </span>
-              </NuxtLink>
-            </div>
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl mb-6">
+            <span class="block">高度集成的</span>
+            <span class="block mt-2 text-teal-600 dark:text-teal-500">IM 框架</span>
+          </h1>
 
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl mb-6">
-              <span class="block">高度集成的</span>
-              <span class="block mt-2 text-teal-600 dark:text-teal-500">IM 框架</span>
-            </h1>
+          <p class="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+            HuLa 是一款
+            <a
+              href="https://github.com/HuLaSpark/HuLa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-teal-600 dark:text-teal-400 hover:underline">
+              开源的即时通讯应用程序
+            </a>
+            功能更全面和强大。
+          </p>
 
-            <p class="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
-              HuLa 是一款
-              <a
-                href="https://github.com/HuLaSpark/HuLa"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-teal-600 dark:text-teal-400 hover:underline">
-                开源的即时通讯应用程序
-              </a>
-              功能更全面和强大。
-            </p>
+          <p class="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            可集成更多应用插件，满足各种应用场景。
+          </p>
 
-            <p class="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              可集成更多应用插件，满足各种应用场景。
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
-              <a
-                href="/docs/getting-started/introduction"
-                class="inline-flex items-center px-6 py-3 rounded-lg bg-teal-500 text-white hover:bg-teal-600 transition shadow-lg shadow-teal-500/20">
-                <span class="font-medium">开始使用</span>
-                <UIcon name="solar:arrow-right-linear" class="w-5 h-5 ml-2" />
-              </a>
-              <div v-if="!isMobile" class="hidden md:block">
-                <!-- Mac下载按钮 -->
-                <UPopover v-if="system === 'mac'" v-model:open="panelVisible" mode="hover">
-                  <div class="flex items-center gap-4">
-                    <div
-                      :class="{ 'text-teal-600': panelVisible }"
-                      class="group flex items-center gap-2 text-sm bg-[#fefefe] w-fit px-6 py-2 rounded-md dark:bg-gray-800">
-                      <svg class="size-6 group-hover:text-teal-600"><use href="#mac"></use></svg>
-                      <span class="group-hover:text-teal-600">MacOS</span>
-                      <UIcon
-                        name="solar:alt-arrow-down-line-duotone"
-                        :class="{ 'rotate-180': panelVisible }"
-                        class="w-4 h-4 group-hover:text-teal-600 group-hover:rotate-180" />
-                    </div>
+          <!-- CTA Buttons -->
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
+            <a
+              href="/docs/getting-started/introduction"
+              class="inline-flex items-center px-6 py-3 rounded-lg bg-teal-500 text-white hover:bg-teal-600 transition shadow-lg shadow-teal-500/20">
+              <span class="font-medium">开始使用</span>
+              <UIcon name="solar:arrow-right-linear" class="w-5 h-5 ml-2" />
+            </a>
+            <div v-if="!isMobile" class="hidden md:block">
+              <!-- Mac下载按钮 -->
+              <UPopover v-if="system === 'mac'" v-model:open="panelVisible" mode="hover">
+                <div class="flex items-center gap-4">
+                  <div
+                    :class="{ 'text-teal-600': panelVisible }"
+                    class="group flex items-center gap-2 text-sm bg-[#fefefe] w-fit px-6 py-2 rounded-md dark:bg-gray-800">
+                    <svg class="size-6 group-hover:text-teal-600"><use href="#mac"></use></svg>
+                    <span class="group-hover:text-teal-600">MacOS</span>
+                    <UIcon
+                      name="solar:alt-arrow-down-line-duotone"
+                      :class="{ 'rotate-180': panelVisible }"
+                      class="w-4 h-4 group-hover:text-teal-600 group-hover:rotate-180" />
                   </div>
+                </div>
 
-                  <template #panel>
-                    <div class="p-2 flex flex-col gap-2">
-                      <a
-                        v-for="(item, index) in macDownloads"
-                        :key="index"
-                        class="flex items-center gap-4 py-1 px-2 box-border rounded-md hover:bg-gray-100 hover:dark:bg-gray-800"
-                        rel="noopener noreferrer"
-                        :href="item.url">
-                        <svg class="size-4 flex-shrink-0"><use href="#to-bottom"></use></svg>
-                        <p class="text-end w-full">{{ item.label }}</p>
-                      </a>
-                    </div>
-                  </template>
-                </UPopover>
-
-                <!-- Windows下载按钮 -->
-                <template v-if="system === 'windows'">
-                  <div class="flex items-center gap-4">
+                <template #panel>
+                  <div class="p-2 flex flex-col gap-2">
                     <a
-                      class="group flex items-center gap-2 text-sm bg-[#fefefe] w-fit px-6 py-2 rounded-md dark:bg-gray-800"
+                      v-for="(item, index) in macDownloads"
+                      :key="index"
+                      class="flex items-center gap-4 py-1 px-2 box-border rounded-md hover:bg-gray-100 hover:dark:bg-gray-800"
                       rel="noopener noreferrer"
-                      :href="windowsDownload.url">
-                      <svg class="size-6 group-hover:text-teal-600"><use href="#windows"></use></svg>
-                      <span class="group-hover:text-teal-600">Windows</span>
+                      :href="item.url">
+                      <svg class="size-4 flex-shrink-0"><use href="#to-bottom"></use></svg>
+                      <p class="text-end w-full">{{ item.label }}</p>
                     </a>
                   </div>
                 </template>
-              </div>
-              <div v-else class="text-center py-4 text-gray-500">移动端版本敬请期待</div>
+              </UPopover>
+
+              <!-- Windows下载按钮 -->
+              <template v-if="system === 'windows'">
+                <div class="flex items-center gap-4">
+                  <a
+                    class="group flex items-center gap-2 text-sm bg-[#fefefe] w-fit px-6 py-2 rounded-md dark:bg-gray-800"
+                    rel="noopener noreferrer"
+                    :href="windowsDownload.url">
+                    <svg class="size-6 group-hover:text-teal-600"><use href="#windows"></use></svg>
+                    <span class="group-hover:text-teal-600">Windows</span>
+                  </a>
+                </div>
+              </template>
             </div>
+            <div v-else class="text-center py-4 text-gray-500">移动端版本敬请期待</div>
+          </div>
+        </div>
+
+        <!-- Key Features -->
+        <div class="mt-32 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div
+            class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
+            <div class="absolute -top-4 left-4">
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
+                <UIcon name="solar:chat-dots-bold" class="w-5 h-5" />
+              </span>
+            </div>
+            <h3
+              class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
+              即时通讯
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+              支持文本、图片、语音等多种消息类型，实现流畅的即时通讯体验。基于 WebSocket
+              的实时通信，确保消息的及时送达。
+            </p>
           </div>
 
-          <!-- Key Features -->
-          <div class="mt-32 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div
-              class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
-              <div class="absolute -top-4 left-4">
-                <span
-                  class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
-                  <UIcon name="solar:chat-dots-bold" class="w-5 h-5" />
-                </span>
-              </div>
-              <h3
-                class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
-                即时通讯
-              </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-400">
-                支持文本、图片、语音等多种消息类型，实现流畅的即时通讯体验。基于 WebSocket
-                的实时通信，确保消息的及时送达。
-              </p>
+          <div
+            class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
+            <div class="absolute -top-4 left-4">
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
+                <UIcon name="solar:shield-keyhole-bold" class="w-5 h-5" />
+              </span>
             </div>
-
-            <div
-              class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
-              <div class="absolute -top-4 left-4">
-                <span
-                  class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
-                  <UIcon name="solar:shield-keyhole-bold" class="w-5 h-5" />
-                </span>
-              </div>
-              <h3
-                class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
-                安全可靠
-              </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-400">
-                采用端到端加密技术，确保用户隐私和数据安全。支持消息加密传输，保护您的通信内容不被窃取。
-              </p>
-            </div>
-
-            <div
-              class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
-              <div class="absolute -top-4 left-4">
-                <span
-                  class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
-                  <UIcon name="solar:code-square-bold" class="w-5 h-5" />
-                </span>
-              </div>
-              <h3
-                class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
-                开源生态
-              </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-400">
-                完全开源，支持自定义开发和扩展，打造属于你的IM系统。提供丰富的API接口，方便与其他系统集成。
-              </p>
-            </div>
-
-            <div
-              class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
-              <div class="absolute -top-4 left-4">
-                <span
-                  class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
-                  <UIcon name="solar:widget-bold" class="w-5 h-5" />
-                </span>
-              </div>
-              <h3
-                class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
-                跨平台支持
-              </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-400">
-                支持 Windows、MacOS 等多个平台，提供统一的用户体验。基于 Tauri 构建，确保应用性能和稳定性。
-              </p>
-            </div>
-
-            <div
-              class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
-              <div class="absolute -top-4 left-4">
-                <span
-                  class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
-                  <UIcon name="solar:user-plus-bold" class="w-5 h-5" />
-                </span>
-              </div>
-              <h3
-                class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
-                社区驱动
-              </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-400">
-                活跃的开发者社区，持续提供功能更新和问题修复。欢迎参与项目开发，共同打造更好的即时通讯工具。
-              </p>
-            </div>
-
-            <div
-              class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
-              <div class="absolute -top-4 left-4">
-                <span
-                  class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
-                  <UIcon name="solar:settings-bold" class="w-5 h-5" />
-                </span>
-              </div>
-              <h3
-                class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
-                高度可定制
-              </h3>
-              <p class="mt-2 text-gray-600 dark:text-gray-400">
-                提供丰富的配置选项，满足不同场景的需求。支持主题定制、插件扩展，打造个性化的通讯工具。
-              </p>
-            </div>
+            <h3
+              class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
+              安全可靠
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+              采用端到端加密技术，确保用户隐私和数据安全。支持消息加密传输，保护您的通信内容不被窃取。
+            </p>
           </div>
 
-          <!-- 图片 -->
-          <div class="mt-32 w-full flex items-center justify-center" @click="toggleImage">
-            <Transition name="fade" mode="out-in">
-              <img
-                v-if="showFirstImage"
-                key="first"
-                class="dark:hidden w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
-                src="/assets/images/1.png"
-                alt="" />
-              <img
-                v-else
-                key="second"
-                class="dark:hidden w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
-                src="/assets/images/3.png"
-                alt="" />
-            </Transition>
-            <Transition name="fade" mode="out-in">
-              <img
-                v-if="showFirstImage"
-                key="first-dark"
-                class="hidden dark:block w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
-                src="/assets/images/2.png"
-                alt="" />
-              <img
-                v-else
-                key="second-dark"
-                class="hidden dark:block w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
-                src="/assets/images/4.png"
-                alt="" />
-            </Transition>
+          <div
+            class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
+            <div class="absolute -top-4 left-4">
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
+                <UIcon name="solar:code-square-bold" class="w-5 h-5" />
+              </span>
+            </div>
+            <h3
+              class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
+              开源生态
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+              完全开源，支持自定义开发和扩展，打造属于你的IM系统。提供丰富的API接口，方便与其他系统集成。
+            </p>
           </div>
 
-          <!-- Technical Features -->
-          <div class="mt-32 relative">
-            <!-- Background glow effect -->
+          <div
+            class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
+            <div class="absolute -top-4 left-4">
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
+                <UIcon name="solar:widget-bold" class="w-5 h-5" />
+              </span>
+            </div>
+            <h3
+              class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
+              跨平台支持
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+              支持 Windows、MacOS 等多个平台，提供统一的用户体验。基于 Tauri 构建，确保应用性能和稳定性。
+            </p>
+          </div>
+
+          <div
+            class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
+            <div class="absolute -top-4 left-4">
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
+                <UIcon name="solar:user-plus-bold" class="w-5 h-5" />
+              </span>
+            </div>
+            <h3
+              class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
+              社区驱动
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+              活跃的开发者社区，持续提供功能更新和问题修复。欢迎参与项目开发，共同打造更好的即时通讯工具。
+            </p>
+          </div>
+
+          <div
+            class="relative rounded-2xl border border-gray-200 dark:border-gray-800 p-8 hover:border-teal-500 dark:hover:border-teal-500 transition group">
+            <div class="absolute -top-4 left-4">
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-teal-500 text-white transform group-hover:scale-110 transition">
+                <UIcon name="solar:settings-bold" class="w-5 h-5" />
+              </span>
+            </div>
+            <h3
+              class="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-500 dark:group-hover:text-teal-400 transition">
+              高度可定制
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+              提供丰富的配置选项，满足不同场景的需求。支持主题定制、插件扩展，打造个性化的通讯工具。
+            </p>
+          </div>
+        </div>
+
+        <!-- 图片 -->
+        <div class="mt-32 w-full flex items-center justify-center" @click="toggleImage">
+          <Transition name="fade" mode="out-in">
+            <img
+              v-if="showFirstImage"
+              key="first"
+              class="dark:hidden w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
+              src="/assets/images/1.png"
+              alt="" />
+            <img
+              v-else
+              key="second"
+              class="dark:hidden w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
+              src="/assets/images/3.png"
+              alt="" />
+          </Transition>
+          <Transition name="fade" mode="out-in">
+            <img
+              v-if="showFirstImage"
+              key="first-dark"
+              class="hidden dark:block w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
+              src="/assets/images/2.png"
+              alt="" />
+            <img
+              v-else
+              key="second-dark"
+              class="hidden dark:block w-full max-w-5xl aspect-auto md:aspect-[5xl] select-none cursor-pointer"
+              src="/assets/images/4.png"
+              alt="" />
+          </Transition>
+        </div>
+
+        <!-- Technical Features -->
+        <div class="mt-32 relative">
+          <!-- Background glow effect -->
+          <div
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] pointer-events-none">
             <div
-              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] pointer-events-none">
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-teal-500/30 to-blue-500/30 blur-[64px] opacity-20 animate-pulse"></div>
+              class="absolute inset-0 bg-gradient-to-r from-teal-500/30 to-blue-500/30 blur-[64px] opacity-20 animate-pulse"></div>
+          </div>
+
+          <div class="text-center mb-16 relative">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">技术特性</h2>
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">基于现代化技术栈，提供强大的功能支持</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+            <div
+              class="p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm group hover:scale-[1.02] transition duration-300 hover:shadow-xl">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <UIcon name="solar:server-bold" class="w-6 h-6 mr-2 text-teal-500" />
+                后端架构
+              </h3>
+              <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+                <li class="flex items-center">
+                  <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
+                  基于 Spring Boot 的微服务架构
+                </li>
+                <li class="flex items-center">
+                  <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
+                  高性能的 WebSocket 服务
+                </li>
+                <li class="flex items-center">
+                  <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
+                  分布式消息队列支持
+                </li>
+              </ul>
             </div>
 
-            <div class="text-center mb-16 relative">
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white">技术特性</h2>
-              <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">基于现代化技术栈，提供强大的功能支持</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-              <div
-                class="p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm group hover:scale-[1.02] transition duration-300 hover:shadow-xl">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                  <UIcon name="solar:server-bold" class="w-6 h-6 mr-2 text-teal-500" />
-                  后端架构
-                </h3>
-                <ul class="space-y-3 text-gray-600 dark:text-gray-400">
-                  <li class="flex items-center">
-                    <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
-                    基于 Spring Boot 的微服务架构
-                  </li>
-                  <li class="flex items-center">
-                    <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
-                    高性能的 WebSocket 服务
-                  </li>
-                  <li class="flex items-center">
-                    <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
-                    分布式消息队列支持
-                  </li>
-                </ul>
-              </div>
-
-              <div
-                class="p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm group hover:scale-[1.02] transition duration-300 hover:shadow-xl">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                  <UIcon name="solar:screencast-2-bold" class="w-6 h-6 mr-2 text-teal-500" />
-                  客户端技术
-                </h3>
-                <ul class="space-y-3 text-gray-600 dark:text-gray-400">
-                  <li class="flex items-center">
-                    <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
-                    Tauri + Vue3 + Typescript 构建
-                  </li>
-                  <li class="flex items-center">
-                    <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
-                    优雅的UI设计和交互体验
-                  </li>
-                  <li class="flex items-center">
-                    <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
-                    高效的消息处理机制
-                  </li>
-                </ul>
-              </div>
+            <div
+              class="p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm group hover:scale-[1.02] transition duration-300 hover:shadow-xl">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <UIcon name="solar:screencast-2-bold" class="w-6 h-6 mr-2 text-teal-500" />
+                客户端技术
+              </h3>
+              <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+                <li class="flex items-center">
+                  <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
+                  Tauri + Vue3 + Typescript 构建
+                </li>
+                <li class="flex items-center">
+                  <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
+                  优雅的UI设计和交互体验
+                </li>
+                <li class="flex items-center">
+                  <UIcon name="solar:check-circle-bold" class="w-5 h-5 mr-2 text-teal-500" />
+                  高效的消息处理机制
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -438,8 +420,8 @@
       </div>
     </div>
 
-    <!-- Community Section -->
-    <div class="mt-32 text-center px-4 sm:px-6">
+    <!-- 社区部分 -->
+    <div class="relative mt-32 text-center px-4 sm:px-6">
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">加入我们</h2>
       <p class="mt-4 text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
         HuLa
@@ -464,7 +446,7 @@
     </div>
 
     <!-- 页脚部分 -->
-    <footer class="mt-32 bg-[#f8fafc] dark:bg-gray-900 w-full">
+    <footer class="relative mt-32 bg-[#f8fafc] dark:bg-gray-900 w-full">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <!-- 联系方式 -->
         <div class="flex items-start gap-8 mb-8">
@@ -526,7 +508,7 @@
         </div>
       </div>
     </footer>
-  </main>
+  </PageBackground>
 </template>
 <script setup lang="ts">
 import { useUserSystem } from '~/hooks/useUserSystem'
@@ -600,6 +582,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/** */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

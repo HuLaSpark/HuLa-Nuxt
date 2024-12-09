@@ -1,9 +1,10 @@
 <template>
   <div>
     <Header />
-    <slot name="left" />
-    <slot name="main" />
-    <slot name="right" />
+    <Docs>
+      <slot />
+    </Docs>
+    <Footer />
   </div>
 </template>
 

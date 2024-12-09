@@ -94,19 +94,97 @@
     </div>
   </div>
 
-  <div v-if="isMobileMenuOpen" class="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex flex-col">
+  <div v-if="isMobileMenuOpen" class="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex flex-col overflow-y-auto">
     <button
       @click="isMobileMenuOpen = false"
       class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
       <UIcon name="solar:close-circle-linear" class="w-6 h-6" />
     </button>
-    <div class="p-4">
-      <span
-        :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
-        class="font-semibold text-sm/6 inline-block relative">
-        开始使用
-      </span>
-      <span class="text-sm leading-snug text-gray-500 dark:text-gray-400 line-clamp-2"> 了解如何开始使用 HuLa </span>
+
+    <div class="p-4 space-y-4">
+      <div class="flex items-center gap-2.5 border-b pb-4 border-gray-200 dark:border-gray-800">
+        <NuxtLink to="/" @click="isMobileMenuOpen = false" class="inline-flex items-center gap-2.5">
+          <img class="w-7 h-7" src="~/assets/logo/logo.png" alt="" />
+          <span class="text-lg text-teal-900 dark:text-teal-600 font-semibold">HuLa</span>
+        </NuxtLink>
+        <span
+          class="inline-flex items-center text-xs px-1.5 py-0.5 bg-teal-50 dark:bg-teal-400 dark:bg-opacity-10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500 dark:ring-teal-400 ring-opacity-25 dark:ring-opacity-25 rounded font-semibold">
+          {{ config.MasterVersion }}
+        </span>
+      </div>
+
+      <div class="space-y-2">
+        <h3 class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">文档</h3>
+        <div class="space-y-1">
+          <NuxtLink
+            to="/docs/getting-started/introduction"
+            @click="isMobileMenuOpen = false"
+            :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
+            class="block px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50 flex items-center gap-2">
+            <UIcon
+              name="solar:bolt-outline"
+              :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
+              class="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+            <div>
+              <span
+                :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
+                class="font-semibold text-sm/6 block">
+                开始使用
+              </span>
+              <span class="text-xs text-gray-500 dark:text-gray-400 line-clamp-1"> 了解如何开始使用 HuLa </span>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
+
+      <div class="space-y-2 mt-4">
+        <h3 class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">快捷操作</h3>
+        <div class="grid grid-cols-2 gap-2">
+          <button
+            @click="handleMobileAction('new-file')"
+            class="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50">
+            <UIcon name="i-heroicons-document-plus" class="w-4 h-4 text-gray-500 dark:text-gray-400" />
+            <span class="text-sm">新建文件</span>
+          </button>
+          <button
+            @click="handleMobileAction('new-folder')"
+            class="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50">
+            <UIcon name="i-heroicons-folder-plus" class="w-4 h-4 text-gray-500 dark:text-gray-400" />
+            <span class="text-sm">新建文件夹</span>
+          </button>
+          <button
+            @click="handleMobileAction('hashtag')"
+            class="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50">
+            <UIcon name="i-heroicons-hashtag" class="w-4 h-4 text-gray-500 dark:text-gray-400" />
+            <span class="text-sm">添加标签</span>
+          </button>
+          <button
+            @click="handleMobileAction('label')"
+            class="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50">
+            <UIcon name="i-heroicons-tag" class="w-4 h-4 text-gray-500 dark:text-gray-400" />
+            <span class="text-sm">添加标签</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="space-y-2 mt-4">
+        <h3 class="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">链接</h3>
+        <div class="space-y-1">
+          <a
+            v-for="user in users"
+            :key="user.id"
+            :href="user.href"
+            target="_blank"
+            class="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50">
+            <img
+              :src="user.avatar.src"
+              :srcset="user.avatar.srcset"
+              :loading="user.avatar.loading as any"
+              class="w-6 h-6 rounded-full" />
+            <span class="text-sm">{{ user.label }}</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -228,6 +306,25 @@ const onSelect = (option: any) => {
 // 检查当前路由是否匹配
 const isActive = (path: string) => {
   return route.path === path
+}
+
+const handleMobileAction = (action: string) => {
+  switch (action) {
+    case 'new-file':
+      toast.add({ title: 'New file added!' })
+      break
+    case 'new-folder':
+      toast.add({ title: 'New folder added!' })
+      break
+    case 'hashtag':
+      toast.add({ title: 'Hashtag added!' })
+      break
+    case 'label':
+      toast.add({ title: 'Label added!' })
+      break
+    default:
+      break
+  }
 }
 </script>
 
