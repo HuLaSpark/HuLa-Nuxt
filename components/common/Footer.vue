@@ -45,7 +45,7 @@
       class="container mx-auto px-4 mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
       <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <div class="text-gray-600 dark:text-gray-400 text-xs md:text-sm">
-          {{ currentYear }} HuLaSpark. All rights reserved.
+          Copyright © {{ currentYear }} HuLaSpark. All rights reserved.
         </div>
         <div class="flex space-x-4">
           <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-teal-600 transition text-xs md:text-sm">

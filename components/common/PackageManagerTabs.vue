@@ -9,7 +9,7 @@
           manager === 'npm' || manager === 'yarn'
             ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed opacity-50'
             : activeManager === manager
-              ? 'text-teal-600 dark:text-teal-500 border-b-2 border-transparent border-teal-600 dark:border-teal-500'
+              ? 'text-teal-600 dark:text-teal-500 border-b-2 border-teal-400 dark:border-teal-600'
               : ''
         ]"
         :disabled="manager === 'npm' || manager === 'yarn'"

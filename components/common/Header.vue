@@ -120,7 +120,7 @@
             to="/docs/getting-started/introduction"
             @click="isMobileMenuOpen = false"
             :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
-            class="block px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50 flex items-center gap-2">
+            class="px-2 py-1.5 rounded-md hover:bg-gray-100/50 dark:hover:bg-gray-950/50 flex items-center gap-2">
             <UIcon
               name="solar:bolt-outline"
               :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"

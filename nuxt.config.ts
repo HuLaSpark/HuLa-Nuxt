@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     preference: 'dark' // default value of colorMode.preference
   },
   appConfig: {
-    MasterVersion: 'v2.5.5'
+    MasterVersion: 'v2.5.6'
   },
   components: [
     {
@@ -28,6 +28,10 @@ export default defineNuxtConfig({
           additionalData: '@use "~/styles/scss/variable.scss" as *;'
         }
       }
+    },
+    esbuild: {
+      // * 打包去除 console.log && debugger
+      pure: ['console.log', 'debugger']
     }
   },
   compatibilityDate: '2024-04-03',
