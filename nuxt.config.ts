@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/test-utils/module', '@nuxt/ui', '@nuxt/image', '@nuxtjs/color-mode'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
     head: {
       script: [{ src: '/icon.js' }]
     }
