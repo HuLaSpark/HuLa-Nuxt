@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.0...v1.6.1) (2024-12-09)
+
+
+### Bug Fixes
+
+* **component:** :bug: 修复亮色下的bug ([#27](https://github.com/HuLaSpark/HuLa-Nuxt/issues/27)) ([a15e586](https://github.com/HuLaSpark/HuLa-Nuxt/commit/a15e58631780d04d7151ba2d770820b39c50fd08))
+
 # [1.6.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.6...v1.6.0) (2024-12-09)
 
 
