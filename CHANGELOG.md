@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.6...v1.6.0) (2024-12-09)
+
+
+### Features
+
+* **page:** :sparkles: 新增启动与安装文档页面 ([#26](https://github.com/HuLaSpark/HuLa-Nuxt/issues/26)) ([778d714](https://github.com/HuLaSpark/HuLa-Nuxt/commit/778d71486e801bf6f0fe9869ac467bcf701bbf34))
+
 ## [1.5.6](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.5.5...v1.5.6) (2024-12-07)
 
 
