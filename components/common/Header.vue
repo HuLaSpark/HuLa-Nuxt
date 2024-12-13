@@ -10,11 +10,11 @@
           </label>
         </NuxtLink>
 
-        <div class="relative inline-flex">
-          <UTooltip :text="`最新版本: ${config.MasterVersion}`">
+        <div v-if="hulaVersion" class="relative inline-flex">
+          <UTooltip :text="`最新版本: ${hulaVersion}`">
             <span
               class="inline-flex items-center cursor-pointer text-xs px-1.5 py-0.5 bg-teal-50 dark:bg-teal-400 dark:bg-opacity-10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500 dark:ring-teal-400 ring-opacity-25 dark:ring-opacity-25 -mb-[2px] rounded font-semibold">
-              {{ config.MasterVersion }}
+              {{ hulaVersion }}
             </span>
           </UTooltip>
         </div>
@@ -108,8 +108,9 @@
           <span class="text-lg text-teal-900 dark:text-teal-600 font-semibold">HuLa</span>
         </NuxtLink>
         <span
+          v-if="hulaVersion"
           class="inline-flex items-center text-xs px-1.5 py-0.5 bg-teal-50 dark:bg-teal-400 dark:bg-opacity-10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500 dark:ring-teal-400 ring-opacity-25 dark:ring-opacity-25 rounded font-semibold">
-          {{ config.MasterVersion }}
+          {{ hulaVersion }}
         </span>
       </div>
 
@@ -199,7 +200,7 @@
 </template>
 
 <script setup lang="ts">
-const config = useAppConfig()
+const hulaVersion = ref()
 const route = useRoute()
 const isOpen = ref(false)
 const panelVisible = ref(false)
@@ -326,6 +327,10 @@ const handleMobileAction = (action: string) => {
       break
   }
 }
+
+onMounted(() => {
+  hulaVersion.value = localStorage.getItem('hulaVersion') || void 0
+})
 </script>
 
 <style scoped lang="scss"></style>
