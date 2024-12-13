@@ -11,6 +11,9 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'dark' // default value of colorMode.preference
   },
+  appConfig: {
+    MasterVersion: 'v2.5.8'
+  },
   components: [
     {
       path: '~/components/',

@@ -9,7 +9,7 @@
             <NuxtLink to="https://github.com/HuLaSpark/HuLa" target="_blank" rel="noopener noreferrer">
               <span
                 class="inline-flex items-center text-sm px-3 py-1.5 bg-teal-50 dark:bg-teal-400/10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500/25 dark:ring-teal-400/25 rounded-full font-semibold transition hover:bg-teal-100 dark:hover:bg-teal-400/15">
-                <span>HuLa {{ hulaVersion }} 现已发布</span>
+                <span>HuLa {{ config.MasterVersion }} 现已发布</span>
                 <UIcon name="solar:arrow-right-line-duotone" class="w-5 h-5 ml-1" />
               </span>
             </NuxtLink>
@@ -516,7 +516,7 @@ import { useUserSystem } from '~/hooks/useUserSystem'
 useSeoMeta({
   title: 'HuLa: 一款高度集成的即时通讯应用'
 })
-const hulaVersion = ref()
+const config = useAppConfig()
 const panelVisible = ref(false)
 const showFirstImage = ref(true)
 const { system, isMobile } = useUserSystem()
@@ -535,30 +535,30 @@ const techImages = ref([
 const macDownloads = computed(() => [
   {
     label: 'aarch64.app.tar.gz',
-    url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${hulaVersion.value}/HuLa_aarch64.app.tar.gz`,
+    url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_aarch64.app.tar.gz`,
     filename: 'aarch64.app.tar.gz'
   },
   {
     label: 'x64.app.tar.gz',
-    url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${hulaVersion.value}/HuLa_x64.app.tar.gz`,
+    url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_x64.app.tar.gz`,
     filename: 'x64.app.tar.gz'
   },
   {
     label: 'aarch64.dmg',
-    url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${hulaVersion.value}/HuLa_${hulaVersion.value.replace('v', '')}_aarch64.dmg`,
-    filename: `HuLa_${hulaVersion.value.replace('v', '')}_aarch64.dmg`
+    url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_${config.MasterVersion.replace('v', '')}_aarch64.dmg`,
+    filename: `HuLa_${config.MasterVersion.replace('v', '')}_aarch64.dmg`
   },
   {
     label: 'x64.dmg',
-    url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${hulaVersion.value}/HuLa_${hulaVersion.value.replace('v', '')}_x64.dmg`,
-    filename: `HuLa_${hulaVersion.value.replace('v', '')}_x64.dmg`
+    url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_${config.MasterVersion.replace('v', '')}_x64.dmg`,
+    filename: `HuLa_${config.MasterVersion.replace('v', '')}_x64.dmg`
   }
 ])
 
 const windowsDownload = computed(() => ({
   label: 'x64-setup.exe',
-  url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${hulaVersion.value}/HuLa_${hulaVersion.value.replace('v', '')}_x64-setup.exe`,
-  filename: `HuLa_${hulaVersion.value.replace('v', '')}_x64-setup.exe`
+  url: `https://gitee.com/HuLaSpark/HuLa/releases/download/${config.MasterVersion}/HuLa_${config.MasterVersion.replace('v', '')}_x64-setup.exe`,
+  filename: `HuLa_${config.MasterVersion.replace('v', '')}_x64-setup.exe`
 }))
 
 const toggleImage = () => {
@@ -573,17 +573,6 @@ const startImageRotation = () => {
 }
 
 onMounted(() => {
-  fetch(
-    'https://gitee.com/api/v5/repos/HuLaSpark/HuLa/tags?access_token=0312a213a6b6882beb96f487e75661a6&sort=updated&direction=desc&page=1&per_page=1',
-    {
-      method: 'GET'
-    }
-  )
-    .then((res) => res.json())
-    .then((res) => {
-      hulaVersion.value = res[0].name
-      localStorage.setItem('hulaVersion', hulaVersion.value)
-    })
   startImageRotation()
 })
 
