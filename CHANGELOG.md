@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.1...v1.6.2) (2024-12-13)
+
+
+### Performance Improvements
+
+* **component:** :zap: 优化获取hula版本号的方法 ([#29](https://github.com/HuLaSpark/HuLa-Nuxt/issues/29)) ([e73d595](https://github.com/HuLaSpark/HuLa-Nuxt/commit/e73d5955f3f39d822bb21234aa3a2a744faa64b1))
+
 ## [1.6.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.0...v1.6.1) (2024-12-09)
 
 
