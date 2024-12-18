@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     preference: 'dark' // default value of colorMode.preference
   },
   appConfig: {
-    MasterVersion: 'v2.5.8'
+    MasterVersion: 'v2.5.9'
   },
   components: [
     {
