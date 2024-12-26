@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[calc(100vh-var(--header-height))] relative bg-[#f8fafc] dark:bg-[#111729] overflow-hidden">
+  <div class="min-h-[calc(100vh-var(--header-height))] bg-[#f8fafc] dark:bg-[#111729]">
     <img
       class="pointer-events-none absolute w-full top-[1px] text-teal flex-shrink-0 z-10"
       src="/assets/svg/header.svg"
