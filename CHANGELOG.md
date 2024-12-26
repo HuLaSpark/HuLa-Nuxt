@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.2...v1.6.3) (2024-12-26)
+
+
+### Bug Fixes
+
+* **common:** :bug: 修改获取版本号方法 ([#33](https://github.com/HuLaSpark/HuLa-Nuxt/issues/33)) ([f0583a4](https://github.com/HuLaSpark/HuLa-Nuxt/commit/f0583a4b361f49991e4fe76dd58846bc90c1301c))
+
 ## [1.6.2](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.1...v1.6.2) (2024-12-13)
 
 
