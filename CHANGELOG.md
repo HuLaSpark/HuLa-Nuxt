@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.3...v1.6.4) (2024-12-26)
+
+
+### Bug Fixes
+
+* **component:** :bug: 修复windows上replace报错问题 ([d7d2cae](https://github.com/HuLaSpark/HuLa-Nuxt/commit/d7d2cae66fb6c139b833b8fdcbe1327908256180))
+
 ## [1.6.3](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.2...v1.6.3) (2024-12-26)
 
 
