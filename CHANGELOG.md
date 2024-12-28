@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.4...v1.6.5) (2024-12-26)
+
+
+### Bug Fixes
+
+* **style:** :bug: 修改页面布局中内容滚动问题 ([#35](https://github.com/HuLaSpark/HuLa-Nuxt/issues/35)) ([ddd8137](https://github.com/HuLaSpark/HuLa-Nuxt/commit/ddd8137da83803859ecdf775eaae85aecb04e2f4))
+
 ## [1.6.4](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.3...v1.6.4) (2024-12-26)
 
 
