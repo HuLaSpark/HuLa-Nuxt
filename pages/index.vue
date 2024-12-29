@@ -233,8 +233,7 @@
         <!-- Technical Features -->
         <div class="mt-32 relative">
           <!-- Background glow effect -->
-          <div
-            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] pointer-events-none">
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] pointer-events-none">
             <div
               class="absolute inset-0 bg-gradient-to-r from-teal-500/30 to-blue-500/30 blur-[64px] opacity-20 animate-pulse"></div>
           </div>
