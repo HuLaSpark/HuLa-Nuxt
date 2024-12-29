@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.6...v1.6.7) (2024-12-29)
+
+
+### Bug Fixes
+
+* **style:** 🐛 首页在移动端下布局溢出问题  ([#37](https://github.com/HuLaSpark/HuLa-Nuxt/issues/37)) ([c19c7b0](https://github.com/HuLaSpark/HuLa-Nuxt/commit/c19c7b0bacc596b589a0d387792df064092275c3))
+
 ## [1.6.6](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.5...v1.6.6) (2024-12-28)
 
 
