@@ -1,3 +1,10 @@
+## [1.6.8](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.7...v1.6.8) (2025-01-09)
+
+
+### Bug Fixes
+
+* **component:** :bug: 修改一些样式问题 ([e3d4ef6](https://github.com/HuLaSpark/HuLa-Nuxt/commit/e3d4ef61db315ffcc6a65149feca0c89411e8dce))
+
 ## [1.6.7](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.6...v1.6.7) (2024-12-29)
 
 
