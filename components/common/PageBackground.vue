@@ -8,7 +8,7 @@
       <div
         class="absolute inset-0 bg-gradient-to-b from-[#f8fafc] via-[#e2e8f0] to-[#f8fafc] dark:from-[#111729] dark:via-[#0c1322] dark:to-[#111729] opacity-60 dark:opacity-80"></div>
       <div
-        class="absolute inset-0 bg-[url('/assets/svg/grid-light.svg')] dark:bg-[url('/assets/svg/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
+        class="absolute inset-0 bg-[url('/svg/grid-light.svg')] dark:bg-[url('/svg/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]">
         <div class="photon-effect light-photon dark:dark-photon"></div>
         <div class="photon-effect light-photon dark:dark-photon delay-2"></div>
         <div class="photon-effect light-photon dark:dark-photon delay-4"></div>

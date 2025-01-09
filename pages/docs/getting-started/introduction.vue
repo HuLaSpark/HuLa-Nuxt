@@ -57,7 +57,7 @@
         <p class="mb-4 text-sm sm:text-base">准备开始了吗？按照以下步骤启动你的第一个 HuLa 项目:</p>
         <div class="space-y-6">
           <h3 class="text-base sm:text-lg font-medium mb-3">第一步：克隆项目</h3>
-          <div class="not-prose bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+          <div class="not-prose bg-[#e1e1e1] dark:bg-gray-800 rounded-lg p-4">
             <div class="flex flex-col gap-4">
               <div class="relative">
                 <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded pr-10 text-xs sm:text-sm overflow-x-auto">
@@ -84,7 +84,7 @@
           </div>
 
           <h3 class="text-base sm:text-lg font-medium mb-3">第二步：进入项目目录</h3>
-          <div class="not-prose bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+          <div class="not-prose bg-[#e1e1e1] dark:bg-gray-800 rounded-lg p-4">
             <div class="relative">
               <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded pr-10 text-xs sm:text-sm overflow-x-auto">
                 {{ commands.directory }}
@@ -98,7 +98,7 @@
           </div>
 
           <h3 class="text-base sm:text-lg font-medium mb-3">第三步：安装依赖</h3>
-          <div class="not-prose bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+          <div class="not-prose bg-[#e1e1e1] dark:bg-gray-800 rounded-lg p-4">
             <PackageManagerTabs v-model:manager="activeManager" @copy="copyCommand(commands[activeManager].install)">
               <template #default="{ activeManager }">
                 <div>
@@ -118,7 +118,7 @@
           </div>
 
           <h3 class="text-base sm:text-lg font-medium mb-3">第四步：启动项目</h3>
-          <div class="not-prose bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+          <div class="not-prose bg-[#e1e1e1] dark:bg-gray-800 rounded-lg p-4">
             <PackageManagerTabs v-model:manager="activeManager" @copy="copyCommand(commands[activeManager].dev)">
               <template #default="{ activeManager }">
                 <div>
@@ -138,7 +138,7 @@
           </div>
 
           <h3 class="text-base sm:text-lg font-medium mb-3">后续(可操作)：打包项目</h3>
-          <div class="not-prose bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+          <div class="not-prose bg-[#e1e1e1] dark:bg-gray-800 rounded-lg p-4">
             <PackageManagerTabs v-model:manager="activeManager" @copy="copyCommand(commands[activeManager].build)">
               <template #default="{ activeManager }">
                 <div>

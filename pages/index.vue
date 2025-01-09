@@ -389,31 +389,31 @@
         <a href="https://vitejs.dev" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/assets/home/vite.svg"
+            src="/home/vite.svg"
             alt="vite" />
         </a>
         <a href="https://www.typescriptlang.org" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/assets/home/TS.svg"
+            src="/home/TS.svg"
             alt="typescript" />
         </a>
         <a href="https://tauri.app" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/assets/home/tauri.png"
+            src="/home/tauri.png"
             alt="tauri" />
         </a>
         <a href="https://vuejs.org" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/assets/home/vue.png"
+            src="/home/vue.png"
             alt="vue" />
         </a>
         <a href="https://unocss.dev" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/assets/home/unocss.png"
+            src="/home/unocss.png"
             alt="unocss" />
         </a>
       </div>
@@ -523,11 +523,11 @@ const { system, isMobile } = useUserSystem()
 const currentImageIndex = ref(0)
 const techImages = ref([
   {
-    src: '/assets/home/vite.svg',
+    src: '/home/vite.svg',
     alt: 'Vite'
   },
   {
-    src: '/assets/home/unocss.png',
+    src: '/home/unocss.png',
     alt: 'UnoCSS'
   }
 ])
