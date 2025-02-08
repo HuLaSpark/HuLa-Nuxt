@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.8...v1.7.0) (2025-02-08)
+
+
+### Features
+
+* **asset:** :sparkles: 增加gitcode图标 ([6dfb533](https://github.com/HuLaSpark/HuLa-Nuxt/commit/6dfb5337bf778156ae705636c8931a63eb66820d))
+
 ## [1.6.7](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.6...v1.6.7) (2024-12-29)
 
 
