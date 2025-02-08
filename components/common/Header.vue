@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-background/75 backdrop-blur border-b border-gray-300 dark:border-gray-600 -mb-px sticky top-0 z-50 lg:mb-0">
+    class="bg-background/75 backdrop-blur border-b border-gray-200 dark:border-gray-800 -mb-px sticky top-0 z-50 lg:mb-0">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex justify-between items-center gap-3 h-[--header-height]">
       <div class="lg:flex-1 flex items-center gap-2.5">
         <NuxtLink to="/">
@@ -10,16 +10,14 @@
           </label>
         </NuxtLink>
 
-        <ClientOnly>
-          <div v-if="hulaVersion" class="relative inline-flex">
-            <UTooltip :text="`最新版本: ${hulaVersion}`">
-              <span
-                class="inline-flex items-center cursor-pointer text-xs px-1.5 py-0.5 bg-teal-50 dark:bg-teal-400 dark:bg-opacity-10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500 dark:ring-teal-400 ring-opacity-25 dark:ring-opacity-25 -mb-[2px] rounded font-semibold">
-                {{ hulaVersion }}
-              </span>
-            </UTooltip>
-          </div>
-        </ClientOnly>
+        <div v-if="hulaVersion" class="relative inline-flex">
+          <UTooltip :text="`最新版本: ${hulaVersion}`">
+            <span
+              class="inline-flex items-center cursor-pointer text-xs px-1.5 py-0.5 bg-teal-50 dark:bg-teal-400 dark:bg-opacity-10 text-teal-500 dark:text-teal-400 ring-1 ring-inset ring-teal-500 dark:ring-teal-400 ring-opacity-25 dark:ring-opacity-25 -mb-[2px] rounded font-semibold">
+              {{ hulaVersion }}
+            </span>
+          </UTooltip>
+        </div>
       </div>
 
       <ul class="items-center gap-x-8 hidden lg:flex">
@@ -40,9 +38,9 @@
             <div
               class="overflow-hidden focus:outline-none relative bg-white dark:bg-gray-900 ring-1 ring-gray-200 dark:ring-gray-800 rounded-md shadow-lg">
               <div class="p-2 space-y-1">
-                <NuxtLink
+                <a
                   class="px-2 py-1.5 rounded-md flex items-start gap-2 hover:bg-gray-100/50 dark:hover:bg-gray-950/50"
-                  to="/docs/getting-started/introduction">
+                  href="/docs/getting-started/introduction">
                   <UIcon
                     name="solar:bolt-outline"
                     :class="{ 'text-teal-600': isActive('/docs/getting-started/introduction') }"
@@ -57,7 +55,7 @@
                       了解如何开始使用 HuLa
                     </span>
                   </p>
-                </NuxtLink>
+                </a>
               </div>
             </div>
           </template>
@@ -329,7 +327,7 @@ const handleMobileAction = (action: string) => {
   }
 }
 
-onBeforeMount(() => {
+onMounted(() => {
   hulaVersion.value = localStorage.getItem('hulaVersion') || void 0
 })
 </script>

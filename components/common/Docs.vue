@@ -3,7 +3,7 @@
     <div class="flex relative flex-col md:flex-row">
       <!-- Sidebar -->
       <aside
-        class="md:sticky md:top-16 h-auto md:h-[calc(100vh-var(--header-height))] md:w-44 md:ml-48 w-full border-b md:border-b-0 md:border-r border-gray-300 dark:border-gray-600 overflow-y-auto">
+        class="md:sticky md:top-16 h-auto md:h-[calc(100vh-var(--header-height))] md:w-44 md:ml-48 w-full border-b md:border-b-0 md:border-r border-gray-200 dark:border-teal-900 overflow-y-auto">
         <nav class="p-4 space-y-1">
           <div class="mb-4">
             <h3 class="px-3 text-sm font-semibold text-gray-500 dark:text-gray-400">开始使用</h3>

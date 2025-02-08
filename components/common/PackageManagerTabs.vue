@@ -7,7 +7,7 @@
         :class="[
           'px-4 py-2 text-sm font-medium flex items-center gap-2 transition-colors duration-200',
           manager === 'npm' || manager === 'yarn'
-            ? 'text-gray-600 dark:text-gray-600 cursor-not-allowed opacity-50'
+            ? 'text-gray-300 dark:text-gray-600 cursor-not-allowed opacity-50'
             : activeManager === manager
               ? 'text-teal-600 dark:text-teal-500 border-b-2 border-teal-400 dark:border-teal-600'
               : ''
@@ -54,19 +54,19 @@ const props = defineProps({
 
 const managerIcons: Record<string, { icon: string; color: string }> = {
   npm: {
-    icon: '/svg/npm.svg',
+    icon: '/assets/svg/npm.svg',
     color: '#CB3837'
   },
   yarn: {
-    icon: '/svg/yarn.svg',
+    icon: '/assets/svg/yarn.svg',
     color: '#2C8EBB'
   },
   pnpm: {
-    icon: '/svg/pnpm.svg',
+    icon: '/assets/svg/pnpm.svg',
     color: '#F69220'
   },
   bun: {
-    icon: '/svg/bun.svg',
+    icon: '/assets/svg/bun.svg',
     color: '#FBF0DF'
   }
 }

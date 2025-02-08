@@ -389,31 +389,31 @@
         <a href="https://vitejs.dev" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/home/vite.svg"
+            src="/assets/home/vite.svg"
             alt="vite" />
         </a>
         <a href="https://www.typescriptlang.org" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/home/TS.svg"
+            src="/assets/home/TS.svg"
             alt="typescript" />
         </a>
         <a href="https://tauri.app" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/home/tauri.png"
+            src="/assets/home/tauri.png"
             alt="tauri" />
         </a>
         <a href="https://vuejs.org" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/home/vue.png"
+            src="/assets/home/vue.png"
             alt="vue" />
         </a>
         <a href="https://unocss.dev" target="_blank" rel="noopener" class="group">
           <img
             class="h-8 lg:h-10 rounded-md filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
-            src="/home/unocss.png"
+            src="/assets/home/unocss.png"
             alt="unocss" />
         </a>
       </div>
@@ -481,6 +481,13 @@
                   class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400">
                   <UIcon name="i-simple-icons-gitee" class="size-5" />
                 </a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://gitcode.com/HuLaSpark"
+                  class="text-gray-600 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400">
+                  <img src="/assets/svg/gitcode.png" alt="GitCode" class="size-5" />
+                </a>
               </div>
             </div>
             <div>
@@ -523,11 +530,11 @@ const { system, isMobile } = useUserSystem()
 const currentImageIndex = ref(0)
 const techImages = ref([
   {
-    src: '/home/vite.svg',
+    src: '/assets/home/vite.svg',
     alt: 'Vite'
   },
   {
-    src: '/home/unocss.png',
+    src: '/assets/home/unocss.png',
     alt: 'UnoCSS'
   }
 ])
