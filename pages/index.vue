@@ -581,7 +581,7 @@ const startImageRotation = () => {
 
 onMounted(() => {
   fetch(
-    'https://gitee.com/api/v5/repos/HuLaSpark/HuLa/tags?access_token=0312a213a6b6882beb96f487e75661a6&sort=updated&direction=desc&page=1&per_page=1',
+    'https://gitee.com/api/v5/repos/HuLaSpark/HuLa/tags?access_token=a9029798336825cea39ac9e4413b8579&sort=updated&direction=desc&page=1&per_page=1',
     {
       method: 'GET'
     }
