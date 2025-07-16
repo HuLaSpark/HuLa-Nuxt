@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.7.1...v1.8.0) (2025-07-16)
+
+
+### Features
+
+* **style:** :sparkles: 更新首页样式 ([20390ee](https://github.com/HuLaSpark/HuLa-Nuxt/commit/20390eed91b15517e1ad8f5c8690bacd745798da))
+
 ## [1.7.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.7.0...v1.7.1) (2025-07-16)
 
 
