@@ -1,3 +1,12 @@
+## [1.7.1](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.7.0...v1.7.1) (2025-07-16)
+
+
+### Bug Fixes
+
+* **doc:** :bug: 修改配置中路径问题导致的工作流报错 ([fef56ee](https://github.com/HuLaSpark/HuLa-Nuxt/commit/fef56eec2d1954f1ed2fcd796f6cfc8ae4c0ed53))
+* **logo:** :bug: 修改logo ([ddc554c](https://github.com/HuLaSpark/HuLa-Nuxt/commit/ddc554cdc2bf33a82ea0b96e71ee6993f0f38b55))
+* **token:** :bug: 修改gitee token ([c08aba6](https://github.com/HuLaSpark/HuLa-Nuxt/commit/c08aba68581d9ade1a1d0d6f80a564641f99aca4))
+
 # [1.7.0](https://github.com/HuLaSpark/HuLa-Nuxt/compare/v1.6.8...v1.7.0) (2025-02-08)
 
 
